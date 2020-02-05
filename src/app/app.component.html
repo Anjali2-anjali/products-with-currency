@@ -1,0 +1,11 @@
+<select (change)="changePrices($event.target.value)">
+    <option value = "USD">INR</option>
+    <option value = "INR">USD</option>
+  </select>
+  <div style="display:flex">
+    <div *ngFor="let item of products" style="margin:20px">
+      <img [src]="item.image_url"  style="height:100px;width:100px" />
+      <p>{{item.name}}</p>
+      <p>{{item.type}} {{item.price}}</p>
+    </div>
+  </div>
